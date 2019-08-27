@@ -68,4 +68,6 @@ int main(void) {
 	cin >> s;
 	
 	cout << solution(s);
+
+	return 0;
 } 
