@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <iostream>
 
 using namespace std;
 
@@ -35,4 +36,16 @@ int solution(vector<int> priorities, int location) {
 	}
 
     return cnt;
+}
+
+int main(void) {
+	vector<int> p = {2, 1, 3, 2};
+
+	int idx;
+	cin >> idx;
+
+	cout << solution(p, idx);
+
+	return 0;
+
 }
