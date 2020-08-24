@@ -21,11 +21,10 @@ int solution(int n, vector<int> stations, int w)
 	    	}
     	}
 
+    	start = stations[i] + w;
 
-    	if (i == stations.size()-1) {
-    		start = stations[i] + w;
-    	} else {
-    		start = stations[i] + w + 1;
+    	if (i != stations.size()-1) {
+    		start += 1;
     	}
     	
     }
