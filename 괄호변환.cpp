@@ -7,22 +7,21 @@ using namespace std;
 bool is_right(string str) { 
     if (str.size() == 0) return true; 
 
-    stack<char> s;
-    if (str[0] == '(') s.push(str[0]);
+    int cnt = 0;
+    if (str[0] == '(') cnt++;
     else return false;
 
     for (int i = 1; i < str.size(); ++i) {
-        if (str[i] == '(') s.push(str[i]);
-        else {
-            if (s.empty()) return false;
-            s.pop();
+        if (str[i] == '(') cnt++;
+        else cnt--;
+
+        if (cnt < 0) {
+            return false;
         }
 
     }
 
-    if (s.empty()) return true;
-
-    return false;
+    return true;
 
 }
 string dfs(string p) {
