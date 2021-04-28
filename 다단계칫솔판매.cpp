@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int res[10001];
 vector<int> solution(vector<string> enroll, vector<string> referral, vector<string> seller, vector<int> amount) {
     vector<int> answer;
 
-    map<string, int> m;
+    unordered_map<string, int> m;
     m["-"] = 0;
 
     for (int i = 0; i < enroll.size(); ++i) {
